@@ -438,7 +438,8 @@ int main(int argc, char* argv[])
     for(int ih=0; ih<hRefidxement; ih++)
     {
         char level[2];
-        itoa(ih+1,level,10);
+        //itoa(ih+1,level,10); non-standard
+        sprintf(level,"%d",ih+1);
         char meshfilename[FILENAME_MAX];
         strcpy(meshfilename,filename);
         strcat(meshfilename,".h");
