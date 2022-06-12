@@ -23,9 +23,9 @@ else
    endif
 endif
 
-CFLAGS = $(INCDIR) -Wall -m32 -O2
-CPPFLAGS = $(INCDIR) -m32 -O2 -fpermissive
-LFLAGS = $(LIBDIR) -m32 -s -lm
+CFLAGS = $(INCDIR) -Wall -m64 -O2
+CPPFLAGS = $(INCDIR) -m64 -O2 -fpermissive
+LFLAGS = $(LIBDIR) -m64 -s -lm
  
 OBJS = $(addprefix $(OBJDIR)/, triangle.o matfiles.o main.o)
 

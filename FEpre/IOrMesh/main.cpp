@@ -410,7 +410,7 @@ int main(int argc, char* argv[])
     mesh cMesh[hRefidxement];
     int ih = 0;
     char triangleCommand[FILENAME_MAX];
-    strcpy(triangleCommand,"triangle -p");
+    strcpy(triangleCommand,"./triangle.exe -p");
     strcat(triangleCommand,cmdstr);
     strcat(triangleCommand,"DeQ ");
     strcat(triangleCommand,filename);
@@ -429,7 +429,7 @@ int main(int argc, char* argv[])
     strcat(edgefilename,".1.edge");
     readEdgeFile(edgefilename, &cMesh[ih]);
     char deleteCommand[FILENAME_MAX];
-    strcpy(deleteCommand,"del /F /Q ");
+    strcpy(deleteCommand,"rm -rf ");
     strcat(deleteCommand,filename);
     strcat(deleteCommand,".1.*");
     system(deleteCommand);
